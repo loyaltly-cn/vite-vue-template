@@ -11,6 +11,7 @@ import '@/css/transition.css'
 import '@/css/adaptive.css'
 import '@/css/global.scss'
 import '@/css/iconfont.css'
+import 'virtual:uno.css'
 
 createApp(App)
     .use(Varlet)

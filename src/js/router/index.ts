@@ -1,9 +1,14 @@
 import {createRouter, createWebHistory, RouteRecordRaw} from "vue-router";
-import Index from '@pages/index/index.vue'
+
+import Index from '@pages//index/index.vue'
+import Test from '@pages/test/index.jsx'
 
 const list:Array<RouteRecordRaw> = [{
     path:'/',
     redirect:'/index'
+},{
+    path:'/test',
+    component:Test
 },{
     path:'/index',
     component:Index,

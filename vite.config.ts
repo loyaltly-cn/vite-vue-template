@@ -3,14 +3,15 @@ import components from 'unplugin-vue-components/vite'
 import autoImport from 'unplugin-auto-import/vite'
 import { VarletImportResolver } from '@varlet/import-resolver'
 import { defineConfig } from 'vite'
-import jsx from '@vitejs/plugin-vue-jsx'
 import { resolve } from 'path'
-
+import jsx from '@vitejs/plugin-vue-jsx'
+import UnoCSS from 'unocss/vite'
 
 export default defineConfig({
   plugins: [
     vue(),
     jsx(),
+    UnoCSS(),
     components({
       resolvers: [VarletImportResolver()]
     }),
