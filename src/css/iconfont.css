@@ -1,0 +1,18 @@
+@font-face {
+    font-family: "icon";
+    src: url('@/assets/iconfont/iconfont.woff2') format('woff2'),
+    url('@/assets/iconfont/iconfont.woff') format('woff'),
+    url('@/assets/iconfont/iconfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.icon--set,
+.icon--set::before{
+    position: relative;
+    display: inline-block;
+    font: normal normal normal 14px/1 "icon";
+    font-size: var(--icon-size);
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
