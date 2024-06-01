@@ -1,5 +1,5 @@
 import {defineComponent, onMounted, Ref, ref} from "vue";
-import {StyleProvider, StyleVars} from '@varlet/ui'
+import {StyleProvider, StyleVars, Themes} from '@varlet/ui'
 import list from "./index.ts";
 import './style.css'
 import storage from "@/js/storage";
@@ -8,7 +8,8 @@ const Theme = defineComponent({
     setup() {
         onMounted(() =>{
             const theme_str = storage.get('theme')
-            handleThemeChange(theme_str?JSON.parse(theme_str):null)
+            if(!theme_str && window.matchMedia('(prefers-color-scheme: dark)').matches) handleThemeChange(Themes.dark)
+            else handleThemeChange(theme_str?JSON.parse(theme_str):null)
         })
 
         const currentTheme:Ref<StyleVars|null> = ref(null);
