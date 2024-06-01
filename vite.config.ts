@@ -13,7 +13,11 @@ export default defineConfig({
     jsx(),
     UnoCSS(),
     components({
-      resolvers: [VarletImportResolver()]
+      resolvers: [VarletImportResolver()],
+      dirs:['src/components'],
+      extensions:['vue','jsx','tsx'],
+      deep:true,
+      dts: 'src/components.d.ts'
     }),
     autoImport({
       resolvers: [VarletImportResolver({ autoImport: true })]

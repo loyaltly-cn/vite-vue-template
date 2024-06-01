@@ -8,7 +8,12 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
+    QR: typeof import('./src/components/QR/index.jsx')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    ThemeSelect: typeof import('@/components/theme-select')['default']
+    VarButton: typeof import('@varlet/ui')['_ButtonComponent']
+    VarOption: typeof import('@varlet/ui')['_OptionComponent']
+    VarSpace: typeof import('@varlet/ui')['_SpaceComponent']
   }
 }
