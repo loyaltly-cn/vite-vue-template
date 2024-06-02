@@ -1,13 +1,10 @@
-import {Themes} from "@varlet/ui";
+import {StyleVars, Themes} from "@varlet/ui";
 import { reactive } from "vue";
-import theme from "@/js/theme/index.ts"
+import theme from "@/js/theme/theme.ts"
 
-const list = [{
+const list:{text:string,theme:StyleVars}[] = [{
     text:'自定义主题',
-    theme: theme
-},{
-    text:'Md2亮色',
-    theme:null
+    theme:theme
 },{
     text:'Md2暗色',
     theme:Themes.dark

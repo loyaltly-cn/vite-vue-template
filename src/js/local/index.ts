@@ -1,4 +1,4 @@
 export default {
-    token:'',
-    number:100  //page query number
+    token:'' as string|null,
+    number:100 as number  //page query number
 }

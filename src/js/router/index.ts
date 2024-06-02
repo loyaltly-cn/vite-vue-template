@@ -2,8 +2,8 @@ import {createRouter, createWebHistory, RouteRecordRaw} from "vue-router";
 
 import Index from '@pages//index/index.vue'
 import Test from '@pages/test/index.jsx'
-
-
+import _404 from "@pages/404";
+import Login from '@pages/login/index.vue'
 
 const list:Array<RouteRecordRaw> = [{
     path:'/',
@@ -11,11 +11,18 @@ const list:Array<RouteRecordRaw> = [{
 },{
     path:'/index',
     component:Index,
-    children:[{
-        path:'test',
-        name:'test',
-        component:Test,
-    }]
+    meta:{
+        requiresAuth:true
+    }
+},{
+    path:'/test',
+    component:Test,
+},{
+    path:'/:catchAll(.*)',
+    component:_404
+},{
+    path:'/login',
+    component:Login
 }]
 
 const router = createRouter({
