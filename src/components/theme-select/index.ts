@@ -3,7 +3,7 @@ import { reactive } from "vue";
 import theme from "@/js/theme/theme.ts"
 
 const list:{text:string,theme:StyleVars}[] = [{
-    text:'自定义',
+    text:'自定义主题',
     theme:theme
 },{
     text:'Md2暗色',

@@ -1,10 +1,11 @@
-.container:hover .select{
+.containers:hover .select{
     display: flex;
     animation: fadeIn .3s ease forwards;
 }
 
 .select{
     top: 100%;
+    width: auto;
 }
 
 @keyframes fadeIn {
