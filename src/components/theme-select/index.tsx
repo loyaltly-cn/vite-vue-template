@@ -21,15 +21,15 @@ const Theme = defineComponent({
         };
 
         return () => (
-            <div class="container w-auto flex flex-col flex-items-center hover:cursor-pointer">
+            <div class="container relative w-auto flex flex-col flex-items-center hover:cursor-pointer">
                 <div class="flex flex-items-center">
                     <var-icon name="palette-outline" size="30"/>
                     <var-icon name="menu-down" size="30"/>
                 </div>
-                <div class="hidden flex-col flex-items-center var-elevation--3 w-auto fixed top-9 bg-body select">
+                <div class="hidden flex-col flex-items-center var-elevation--3 w-auto absolute bg-body select">
                     {list.map((item,i) =>(
                         <span v-ripple class={
-                            `p-4 text-sm ${item.theme === currentTheme.value ? 'text-primary' : 'hover:bg-outline'}`
+                            `p-4 text-sm ${item.theme === currentTheme.value ? 'text-primary' : 'hover:bg-outline color-text'}`
                         } key={i} onClick={() => handleThemeChange(item.theme)}>{item.text}</span>
                     ))}
                 </div>

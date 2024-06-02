@@ -11,5 +11,6 @@ declare module 'vue' {
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     ThemeSelect: typeof import('./components/theme-select/index.tsx')['default']
+    VarAppBar: typeof import('@varlet/ui')['_AppBarComponent']
   }
 }
