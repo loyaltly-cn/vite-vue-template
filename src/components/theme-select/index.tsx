@@ -29,7 +29,7 @@ const Theme = defineComponent({
                 <div class="hidden flex-col flex-items-center var-elevation--3 w-auto absolute bg-body p0 select">
                     {list.map((item,i) =>(
                         <p v-ripple class={
-                            `p-4 text-sm ${item.theme === currentTheme.value ? 'text-primary' : 'hover:bg-outline color-text'}`
+                            `p-4 text-sm m0 ${item.theme === currentTheme.value ? 'text-primary' : 'hover:bg-outline color-text'}`
                         } key={i} onClick={() => handleThemeChange(item.theme)}>{item.text}</p>
                     ))}
                 </div>
