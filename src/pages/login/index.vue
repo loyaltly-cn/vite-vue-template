@@ -1,10 +1,5 @@
 <template>
     <div>
-<!--        <var-app-bar title="欢迎使用拍了吗管理后台" title-position="center" round>-->
-<!--            <template #right>-->
-<!--                <theme-select/>-->
-<!--            </template>-->
-<!--        </var-app-bar>-->
         <var-space justify="end" class="box">
             <div class="w-100 h-100 var-elevation--2 rounded-2xl p5 bg-body relative top-100 right-10 text-center">
                 <h2>xxxx登录</h2>
