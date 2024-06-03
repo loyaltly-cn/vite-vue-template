@@ -7,10 +7,21 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    Captcha: typeof import('./components/captcha/index.tsx')['default']
     QR: typeof import('./components/QR/index.jsx')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     ThemeSelect: typeof import('./components/theme-select/index.tsx')['default']
     VarAppBar: typeof import('@varlet/ui')['_AppBarComponent']
+    VarButton: typeof import('@varlet/ui')['_ButtonComponent']
+    VarForm: typeof import('@varlet/ui')['_FormComponent']
+    VarIcon: typeof import('@varlet/ui')['_IconComponent']
+    VarInput: typeof import('@varlet/ui')['_InputComponent']
+    VarSpace: typeof import('@varlet/ui')['_SpaceComponent']
+    VarTab: typeof import('@varlet/ui')['_TabComponent']
+    VarTabItem: typeof import('@varlet/ui')['_TabItemComponent']
+    VarTabs: typeof import('@varlet/ui')['_TabsComponent']
+    VarTabsItem: typeof import('@varlet/ui')['_TabsItemComponent']
+    VarTabsItems: typeof import('@varlet/ui')['_TabsItemsComponent']
   }
 }

@@ -1,4 +1,4 @@
-w.router-enter-active{
+.router-enter-active{
     transition: all .5s ease-out;
 }
 .router-leave-active {

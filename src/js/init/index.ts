@@ -4,12 +4,14 @@ import task from "@/js/task";
 import {Snackbar} from "@varlet/ui";
 import local from "@/js/local";
 import storage from "@/js/storage";
+import theme from "@/js/theme/index.ts";
 // import http from "@/js/http";
 
 export default async () =>{
 
     task()
     Snackbar.allowMultiple(true)
+    theme.init()
     local.token = storage.get('token')
 
     // if (local.token){

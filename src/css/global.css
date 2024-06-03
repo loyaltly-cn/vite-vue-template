@@ -2,7 +2,7 @@ body {
   transition: background-color 0.25s, color 0.25s;
   color: var(--color-text);
   background-color: var(--color-body);
-  margin: 0;
+  margin: 1.5px;
 }
 
 /*# sourceMappingURL=global.css.map */
