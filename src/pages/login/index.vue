@@ -18,7 +18,7 @@
                                             <var-icon name="cellphone" />
                                         </template>
                                     </var-input>
-                                    <var-input placeholder="请输入验证码" type="number" variant="outlined" clearable v-model="obj.code"  :rules="[v => rules.code.test(v) || '请输入正确的验证码']" maxlength="4">
+                                    <var-input placeholder="请输入验证码" type="number" variant="outlined" clearable  v-model="obj.code"  :rules="[v => rules.code.test(v) || '请输入正确的验证码']" maxlength="4">
                                         <template #prepend-icon>
                                             <var-icon name="lock-outline" />
                                         </template>
@@ -33,12 +33,12 @@
                         <var-tab-item>
                             <var-form class="my-5" @submit="even.submit_pwd" ref="form_password">
                                 <var-space direction="column" >
-                                    <var-input placeholder="请输入账号" type="number" variant="outlined" clearable autofocus v-model="obj.account" :rules="[v => rules.phone.test(v) || '请输入正确的账号']" maxlength="11">
+                                    <var-input placeholder="请输入账号" type="number" variant="outlined" clearable v-model="obj.account" :rules="[v => rules.phone.test(v) || '请输入正确的账号']" maxlength="11">
                                         <template #prepend-icon>
                                             <var-icon name="account-circle-outline" />
                                         </template>
                                     </var-input>
-                                    <var-input placeholder="请输入密码" type="password" variant="outlined" clearable v-model="obj.password" :rules="[v => rules.password.test(v) || '密码格式错误']">
+                                    <var-input placeholder="请输入密码" type="password" variant="outlined" clearable v-model="obj.password" :rules="[v => rules.password.test(v) || '密码格式错误,最少10位的数字字母的组合']">
                                         <template #prepend-icon>
                                             <var-icon name="lock-outline" />
                                         </template>
@@ -54,7 +54,7 @@
     </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
     import {ref} from "vue";
     import {obj} from "./index.ts";
     import rules from "@/js/rules";

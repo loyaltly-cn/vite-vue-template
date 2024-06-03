@@ -8,7 +8,7 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     Captcha: typeof import('./components/captcha/index.tsx')['default']
-    QR: typeof import('./components/QR/index.jsx')['default']
+    QR: typeof import('./components/QR/index.tsx')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     ThemeSelect: typeof import('./components/theme-select/index.tsx')['default']

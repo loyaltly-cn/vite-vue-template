@@ -1,8 +1,8 @@
 import {createRouter, createWebHistory, RouteRecordRaw} from "vue-router";
 
-import Index from '@pages//index/index.vue'
-import Test from '@pages/test/index.jsx'
-import _404 from "@pages/404";
+import Index from '@pages/index/index.vue'
+import Test from '@pages/test/index.tsx'
+import _404 from "@pages/404/index.tsx";
 import Login from '@pages/login/index.vue'
 
 const list:Array<RouteRecordRaw> = [{
