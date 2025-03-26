@@ -1,0 +1,41 @@
+.router-enter-active{
+    transition: all .5s ease-out;
+}
+.router-leave-active {
+    /*transition: all .3s linear;*/
+}
+
+
+.router-enter-from{
+    opacity: 0;
+    transform: translateY(10%);
+}
+
+.router-leave-to{
+    opacity: 0;
+    transform: translateY(-10%);
+}
+
+
+
+.transition-list-enter-active,
+.transition-list-leave-active {
+    transition: all 1s ease;
+}
+.transition-list-enter-from,
+.transition-list-leave-to {
+    opacity: 0;
+    transform: translateX(50%);
+}
+
+
+/*.transition-list-item {*/
+/*    animation: slideIn 1s;*/
+/*}*/
+
+/*@keyframes slideIn {*/
+/*    from {*/
+/*        transform: translateY(5%);*/
+/*        opacity: 0;*/
+/*    }*/
+/*}*/
