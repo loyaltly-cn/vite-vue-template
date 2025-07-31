@@ -9,9 +9,14 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     Captcha: typeof import('./components/captcha/index.tsx')['default']
-    HelloWorld: typeof import('./components/HelloWorld.vue')['default']
     QR: typeof import('./components/QR/index.tsx')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    VarChip: typeof import('@varlet/ui')['_ChipComponent']
+    VarImage: typeof import('@varlet/ui')['_ImageComponent']
+    VarSpace: typeof import('@varlet/ui')['_SpaceComponent']
+  }
+  export interface ComponentCustomProperties {
+    vRipple: typeof import('@varlet/ui')['_RippleComponent']
   }
 }

@@ -2,15 +2,12 @@ import axios from "axios";
 import {LoadingBar, Snackbar} from "@varlet/ui";
 import storage from "@/modules/storage";
 import router from "@/modules/router";
-const baseURL = 'http://localhost:8080/'
-// const baseURL = 'https://xxxxxx/api/'
-const X_API_Key = '16e809101a48d214c91b95518d60c117'
 
 const http = axios.create({
-    baseURL: baseURL,
+    baseURL: __BASE_URL__,
     headers: {
         'Content-Type': 'application/json',
-        'X-API-Key':X_API_Key
+        'X-API-Key':import.meta.env.VITE_X_API_KEY
     },
 });
 

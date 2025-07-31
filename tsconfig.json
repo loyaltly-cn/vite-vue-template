@@ -24,6 +24,6 @@
       "@pages/*": ["src/pages/*"]
     }
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue", "auto-imports.d.ts", "components.d.ts", "src/vue-shims.d.ts", "src/jsx-shims.d.ts"],
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue", "auto-imports.d.ts", "components.d.ts", "src/vue-shims.d.ts", "src/jsx-shims.d.ts","src/env.d.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

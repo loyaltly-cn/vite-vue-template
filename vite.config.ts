@@ -6,29 +6,22 @@ import { defineConfig } from 'vite'
 import { resolve } from 'path'
 import jsx from '@vitejs/plugin-vue-jsx'
 import UnoCSS from 'unocss/vite'
-
 export default defineConfig({
   plugins: [
     vue(),
     jsx(),
     UnoCSS(),
     components({
-      resolvers: [
-        VarletImportResolver(),
-        // (name:string) =>{
-        //   if (name.startsWith('dv-')) return {
-        //     name:`dv-${name}`,
-        //     from:'@kjgl77/datav-vue3'
-        //   }
-        // }
-      ],
+      resolvers: [VarletImportResolver()],
       dirs:['src/components'],
       extensions:['vue','jsx','tsx'],
       deep:true,
       dts: 'src/components.d.ts'
     }),
     autoImport({
-      resolvers: [VarletImportResolver({ autoImport: true })]
+      resolvers: [VarletImportResolver({ autoImport: true })],
+      imports: ['vue', 'vue-router', 'pinia'],
+      dts: 'src/auto-imports.d.ts'
     })
   ],
   resolve:{
@@ -40,8 +33,16 @@ export default defineConfig({
   base:'./',
   server:{
     host:'0.0.0.0',
+    proxy: {
+      '/api': {
+        target: 'http://localhost:8080', // 你后端服务的地址
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, ''),
+      },
+    },
   },
   define:{
-    global: 'window'
+    global: 'window',
+    __BASE_URL__: JSON.stringify('/api')
   }
 })
